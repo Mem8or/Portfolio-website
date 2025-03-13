@@ -10,9 +10,14 @@
         <nav>
 
         </nav>
-        
+        <div id="intro">
+
+        </div>
+        <div id="projects">
+            
+        </div>
     </body>
     <footer>
-        
+
     </footer>
 </html>
