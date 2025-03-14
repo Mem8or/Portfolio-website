@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(40, 36, 36);
+    margin: 0;
+    font-family: 'Franklin Gothic Medium';
+}
+#menu{
+    display: flex;
+    color: whitesmoke;
+    background-color: rgb(140, 128, 128);
+    width: 100vw;
+    height: 50px;
+
+}
+#intro{
+    color: whitesmoke;
+}
+#projects{
+    color: whitesmoke;
+}
+label{
+    color: whitesmoke;
+}
+#contacts{
+    color: whitesmoke;
+}
+input{
+    color: whitesmoke;
+    border-radius: 5px;
+    background-color: rgb(140, 128, 128);
+    font-family: 'Franklin Gothic Medium';
+}
+textarea{
+    color: whitesmoke;
+    border-radius: 5px;
+    background-color: rgb(140, 128, 128);
+    font-family: 'Franklin Gothic Medium';
+}
+
+footer{
+    display: flex;
+    color: whitesmoke;
+    background-color: rgb(19, 18, 18);
+    width: 100vw;
+    height: 50px;
+}
