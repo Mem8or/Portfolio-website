@@ -8,16 +8,16 @@
     </head>
     <body>
         <nav>
-
+            menu here
         </nav>
         <div id="intro">
-
+            introduction
         </div>
         <div id="projects">
-            
+            projects here
         </div>
     </body>
     <footer>
-
+        footer
     </footer>
 </html>
