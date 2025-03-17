@@ -10,6 +10,7 @@ body{
     background-image: url(../images/background.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
+    font-size: 20px;
 }
 .expandible {
     max-width: 50vw;
@@ -24,14 +25,9 @@ body{
     height: 150px;
     flex-direction: row;
     border-radius: 10px;
-    width: 20vw;
+    max-width: 50vw;
     margin-left: 20px;
-}
-.expandiblePreview.active {
-    opacity: 0;
-    height: 0;
-    visibility: hidden;
-    overflow: hidden;
+    margin-right: 20px;
 }
 #portrait{
     display: flex;
@@ -41,13 +37,14 @@ body{
     border-radius: 10px;
     border-color: #140710;
     margin: 20px;
+    float: left;
 }
 .expandibleContent, p, h1, h2{
     margin: 20px;
     display: flex;
 }
 .expandibleContentWrapper {
-    background-color: #461b37;
+    background-color: #885576;
     opacity: 0;
     height: 0;
     visibility: hidden;
@@ -62,6 +59,10 @@ body{
     opacity: 1;
     visibility: visible;
     height: auto;
+    margin: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
 }
 #menu{
     display: flex;
@@ -89,6 +90,7 @@ label{
 
 form{
     margin: 10px;
+    font-size: 20px;
 }
 #submitbutton{
     background-color: #878431;

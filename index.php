@@ -18,7 +18,6 @@
                 Mauris suscipit mollis tellus, sit amet sollicitudin odio dapibus id. Duis consectetur tempor dolor vel congue. Praesent vel egestas augue. Cras vitae felis ut magna molestie viverra in at nisl. Vivamus sollicitudin lorem tortor, in aliquet enim hendrerit quis. Mauris vehicula purus et faucibus blandit. Mauris consectetur, nisl in eleifend cursus, arcu sem iaculis enim, eu laoreet lorem felis ultrices mi. Fusce viverra quis sapien nec congue.
                 Vestibulum bibendum mollis libero eget fringilla. Integer sagittis vulputate sapien. Etiam bibendum ultrices lorem at convallis. Praesent dapibus at libero in mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nunc lacus dolor, elementum vel congue vitae, venenatis id ipsum. Suspendisse elementum ullamcorper massa vitae molestie. Maecenas interdum enim nec eros gravida gravida. Praesent ornare vel elit ut lobortis. Morbi a vestibulum dui, cursus blandit ex. Cras libero turpis, ullamcorper et ligula in, semper aliquam tellus. Pellentesque maximus maximus tincidunt. Phasellus at turpis id ante faucibus dapibus hendrerit non mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce vehicula egestas tincidunt.
             </p>
-            
         </section>
         <section id="projects">
             <?php include("./includes/projects.php");?>

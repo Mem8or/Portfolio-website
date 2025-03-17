@@ -28,7 +28,7 @@
         // content voor in de preview
         $output .= '<div class="expandible"> <div class="expandiblePreview"> <img class="previewImage" src="'. $project['image'] .'" alt="'. $project['imageAlt'] .'"> <h2>'. $project['title'] .'</h2><p class="previewText">'. $project['description'] .'</p></div>';
         // content in het uitklapbare gedeelte
-        $output .= '<div class="expandibleContentWrapper"> <h2>'. $project['title'] .'</h2> <img class="previewImage" src="'. $project['image'] .'" alt="'. $project['imageAlt'] .'"> <div class="expandibleContent">'. $project['content'] .'</div> </div> </div>';
+        $output .= '<div class="expandibleContentWrapper"><div class="expandibleContent">'. $project['content'] .'</div> </div> </div>';
     }};
 
     echo $output;
