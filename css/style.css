@@ -1,63 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
-    background-color: rgb(40, 36, 36);
+    background-color: rgb(70, 27, 55);
     margin: 0;
     font-family: 'Franklin Gothic Medium';
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(../images/background.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+.expandible {
+    max-width: 700px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.expandiblePreview {
+    display: flex;
+    cursor: pointer;
+    background-color: rgb(70, 27, 55);
+    height: 150px;
+    flex-direction: row;
+}
+#portrait{
+    width: 200px;
+    border: 5px solid;
+    border-radius: 5%;
+    border-color: rgb(20, 7, 16);
+    margin: 20px;
+}
+.expandibleContentWrapper {
+    opacity: 0;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity .3s ease-in-out, height 1s ease-in-out;
+    padding-bottom: 10px;
+}
+
+.expandibleContentWrapper.active {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
 }
 #menu{
     display: flex;
     color: whitesmoke;
-    background-color: rgb(140, 128, 128);
-    width: 100vw;
+    background-color: rgb(20, 7, 16);
+    width: 700px;
     height: 50px;
+}
+#intro, #projects, #contact{
+    color: whitesmoke;
+    background-color: rgb(39, 15, 31);
+    width: 700px;
+    
+}
+#previewImage{
+    padding: 10px;
+}
 
-}
-#intro{
-    color: whitesmoke;
-}
-#projects{
-    color: whitesmoke;
-}
 label{
     color: whitesmoke;
 }
-#contacts{
-    color: whitesmoke;
-}
+
 input{
     color: whitesmoke;
     border-radius: 5px;
-    background-color: rgb(140, 128, 128);
+    background-color: rgb(136, 85, 118);
     font-family: 'Franklin Gothic Medium';
 }
 textarea{
     color: whitesmoke;
     border-radius: 5px;
-    background-color: rgb(140, 128, 128);
+    background-color: rgb(136, 85, 118);
     font-family: 'Franklin Gothic Medium';
 }
 
 footer{
     display: flex;
     color: whitesmoke;
-    background-color: rgb(19, 18, 18);
-    width: 100vw;
+    background-color: rgb(20, 7, 16);
+    width: 700px;
     height: 50px;
 }
 
-.expandible {
-    max-width: 500px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.expandiblePreview {
-    cursor: pointer;
-}
-
-.expandibleContentWrapper {
-    display: none;
-}
-
-.expandibleContentWrapper.active {
-    display: block;
+p{
+    max-width: 700px;
 }
