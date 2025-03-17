@@ -22,7 +22,6 @@
             <img src="" alt="image">
         </div>
         <div id="projects">
-            projects here
             <?php include("./includes/projects.php");?>
         </div>
         <div id="contact">

@@ -43,3 +43,21 @@ footer{
     width: 100vw;
     height: 50px;
 }
+
+.expandible {
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.expandiblePreview {
+    cursor: pointer;
+}
+
+.expandibleContentWrapper {
+    display: none;
+}
+
+.expandibleContentWrapper.active {
+    display: block;
+}
