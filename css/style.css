@@ -1,7 +1,7 @@
 body{
     background-color: #461b37;
     margin: 0;
-    font-family: 'Franklin Gothic Medium';
+    font-family: 'Segoe UI';
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -10,8 +10,20 @@ body{
     background-image: url(../images/background.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
-    font-size: 20px;
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
+
+.jump{
+    transition: 1s all ease-in-out;
+    padding: 0;
+}
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
 .expandible {
     max-width: 50vw;
     width: 100%;
@@ -29,6 +41,7 @@ body{
     margin-left: 20px;
     margin-right: 20px;
 }
+
 #portrait{
     display: flex;
     transform: scaleX(-1);
@@ -39,10 +52,12 @@ body{
     margin: 20px;
     float: left;
 }
+
 .expandibleContent, p, h1, h2{
     margin: 20px;
     display: flex;
 }
+
 .expandibleContentWrapper {
     background-color: #885576;
     opacity: 0;
@@ -64,24 +79,30 @@ body{
     margin-right: 20px;
     border-radius: 10px;
 }
+
 #menu{
     display: flex;
     color: whitesmoke;
     background-color: #140710;
     width: 50vw;
-    height: 100px;
+    height: min-content;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 2px solid whitesmoke;
 }
+
 #intro, #projects, #contact{
     color: whitesmoke;
     background-color: #270f1f;
     width: 50vw;
-    
+    padding-bottom: 20vh;
 }
+
 .previewImage{
     margin: 10px;
     border: 5px solid;
     border-radius: 5%;
-    border-color: #140710;
+    border-color: #348731;
 }
 
 label{
@@ -92,35 +113,68 @@ form{
     margin: 10px;
     font-size: 20px;
 }
+
 #submitbutton{
-    background-color: #878431;
+    background-color: #348731;
+    cursor: pointer;
+    width: 150px;
+    height: min-content;
+    border: none;
 }
+
 textarea{
     resize: none;
     width: 45vw;
     height: 300px;
+    border-style: none;
+    font-family: 'Segoe UI';
+    border: 2px solid whitesmoke;
 }
+
+textarea:focus{
+    outline: none;
+}
+
 .formrow{
     margin: 10px;
 }
 
 input{
     color: whitesmoke;
-    border-radius: 5px;
     background-color: #885576;
-    font-family: 'Franklin Gothic Medium';
+    font-family: 'Segoe UI';
+    border-radius: 5px;
+    border-style: none;
+    border: 2px solid whitesmoke;
 }
+
+input:focus{
+    outline: none;
+}
+
+hr{
+    border: 2px solid whitesmoke;
+    max-width: 60vw;
+}
+
 textarea{
     color: whitesmoke;
     border-radius: 5px;
     background-color: #885576;
-    font-family: 'Franklin Gothic Medium';
+    font-family: 'Segoe UI';
 }
 
 footer{
+    border-top: 3px solid whitesmoke;
     display: flex;
     color: whitesmoke;
     background-color: rgb(20, 7, 16);
     width: 50vw;
-    height: 50px;
+    height: 75px;
+    height: min-content;
+}
+
+.hidden{
+    opacity: 0;
+    cursor: default;
 }
