@@ -4,7 +4,6 @@
     $setName = '';
     $setEmail = '';
     $setMessage = '';
-    if(isset($_POST['submit'])){
         if(!empty($_POST['name']) and !empty($_POST['email']) and !empty($_POST['message'])){
             $messages[] = ['name' => htmlspecialchars($_POST['name']), 'email' => htmlspecialchars($_POST['email']), 'message' => htmlspecialchars($_POST['message'])];
             $errors = '<h3 class="green">- Bericht verzonden!</h3>';
@@ -23,7 +22,6 @@
         $setName = htmlspecialchars($_POST['name']);
         $setEmail = htmlspecialchars($_POST['email']);
         $setMessage = htmlspecialchars($_POST['message']);
-    }
 
 ?>
 <html>
