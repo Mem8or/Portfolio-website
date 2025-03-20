@@ -1,3 +1,5 @@
+//verander de status van het element van verborgen naar actief
+
 document.addEventListener('DOMContentLoaded', function() {
     const previews = document.querySelectorAll('.expandiblePreview');
     

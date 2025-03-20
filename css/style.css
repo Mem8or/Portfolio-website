@@ -24,13 +24,13 @@ a{
     text-decoration: none;
 }
 
-.expandible {
+.expandible{
     max-width: 50vw;
     width: 100%;
     box-sizing: border-box;
 }
 
-.expandiblePreview {
+.expandiblePreview{
     display: flex;
     cursor: pointer;
     background-color: #461b37;
@@ -58,7 +58,7 @@ a{
     display: flex;
 }
 
-.expandibleContentWrapper {
+.expandibleContentWrapper{
     background-color: #885576;
     opacity: 0;
     height: 0;
@@ -68,7 +68,7 @@ a{
     padding-bottom: 10px;
 }
 
-.expandibleContentWrapper.active {
+.expandibleContentWrapper.active{
     display: flex;
     cursor: pointer;
     opacity: 1;
@@ -120,6 +120,18 @@ form{
     width: 150px;
     height: min-content;
     border: none;
+}
+
+.green{
+    color: #348731;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.red{
+    color: #852121;
+    margin: 0;
+    padding-left: 10px;
 }
 
 textarea{

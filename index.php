@@ -1,8 +1,7 @@
-<?php
-
-?>
-<html>
+<html lang="nl">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="js/script.js"></script>
@@ -18,7 +17,7 @@
             <img id="portrait" src="images/portrait.jpg" alt="Portrait">
             <p class="text">Hallo mijn naam is Gert van Til, ik ben een web-developer met ervaring in: HTML, CSS, JAVASCRIPT en PHP.</p>
         </section>
-
+        
         <section id="projects">
             <hr>
             <h1>Projecten:</h1>
