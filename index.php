@@ -22,10 +22,10 @@
             <hr>
             <h1>Projecten:</h1>
             <?php include("./includes/projects.php");?>
-            <hr>
         </section>
-
+        
         <section id="contact">
+        <hr>
         <h1>Contact:</h1>
         <?php include("./includes/contact.php");?>
         </section>
@@ -33,9 +33,7 @@
     <footer>
         
     <img src="./images/github.svg" class="icon">
-    <h2>
-        <a href="https://github.com/Mem8or" target="_blank">Github</a>
-    </h2>
+    <h2><a href="https://github.com/Mem8or" target="_blank">Github</a></h2>
 
         <a class="hidden" href="includes/login.php">CMS</a>
     </footer>

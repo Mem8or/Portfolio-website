@@ -113,9 +113,7 @@ a{
 
 .contentImage{
     margin: 10px;
-    border: 5px solid;
     border-radius: 10px;
-    border-color: #348731;
     width: 130px;
     height: 130px;
 }
@@ -137,6 +135,7 @@ form{
 
 #submitbutton{
     background-color: #348731;
+    font-weight: bold;
     cursor: pointer;
     width: 150px;
     height: max-content;
@@ -192,6 +191,7 @@ hr{
     background-color: whitesmoke;
     height: 3px;
     overflow-x: hidden;
+    margin-top: 20px;
 }
 
 textarea{
