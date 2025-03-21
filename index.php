@@ -20,8 +20,8 @@
                 Op deze website is het mogelijk om een paar van mijn afgemaakte opdrachten te bekijken.<br>
                 Het is ook mogelijk om contact op te nemen via het contactformulier.<br>
                 <br>
-                Naast development heb ik ook een oog voor design en mediavormgeving, ik ben ook gezellig en fijn om mee te werken.<br>
-                <br>
+                Naast development heb ik ook een oog voor design en mediavormgeving, ik ben ook gezellig en fijn om mee te werken.
+                <br><br>
                 Ik hoop dat deze website een goed dee geeft wat van mij verwacht kan worden.
             </p>
         </section>

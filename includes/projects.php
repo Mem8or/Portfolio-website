@@ -27,7 +27,7 @@
             'title' => 'CSS Opdracht:', 
             'description' => 'Een opdracht over media queries van mijn codecrashers opleiding.', 
             'links' => ['CSS/index.html'], 
-            'content' => 'In deze opdracht heb ik een website gemaakt die van stijl veranderd gebaseerd op het formaat van het scherm (computer of telefoon). Dit is erg belangrijk voor de bruikbaarheid van de website op veel verschillende apparaten'
+            'content' => 'In deze opdracht heb ik een website gemaakt die van stijl veranderd gebaseerd op het formaat van het scherm (computer of telefoon). Dit is erg belangrijk voor de bruikbaarheid van de website op veel verschillende apparaten. (deze website checkt hier wel voor maar is niet gestyled voor desktop)'
         ],
 
         'project4' => [
