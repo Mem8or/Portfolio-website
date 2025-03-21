@@ -54,14 +54,14 @@
             $links = '';
             // het aanmaken van de links
             foreach($project['links'] as $link){
-                $links .= '<p class = "pagelink"><a href="includes/projects/'. $link .'">Bekijk Project</a></p><br>';
+                $links .= '<p class = "pagelink"><a class="pagelinktext" href="includes/projects/'. $link .'" target="_blank">Bekijk Project</a></p>';
             }
 
         // content voor in de preview
         $output .= '<div class="expandible"> <div class="expandiblePreview"> <img class="previewImage" src="'. $project['image'] .'" alt="'. $project['imageAlt'] .'"> <div class="previewtext"><h2>'. $project['title'] .'</h2><p>'. $project['description'] .'</p></div></div>';
         // content in het uitklapbare gedeelte
         $output .= '<div class="expandibleContentWrapper">
-        '. $links .'
+        <div>'. $links .'</div>
         <div class="expandibleContent">'. $project['content'] .'</div> </div> </div>';
     }};
 

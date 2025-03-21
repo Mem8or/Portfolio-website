@@ -21,24 +21,24 @@ function isDivisibleBy(factor){
     }
 }
 
-const isDivisibleBy3 = numbers.filter(isDivisibleBy(3));
-const isDivisibleBy4 = numbers.filter(isDivisibleBy(4));
-const isDivisibleBy5 = numbers.filter(isDivisibleBy(5));
+const isDivBy3 = numbers.filter(isDivisibleBy(3));
+const isDivBy4 = numbers.filter(isDivisibleBy(4));
+const isDivBy5 = numbers.filter(isDivisibleBy(5));
 
 const evenNumbers = numbers.filter(isEven);
 const evenSum = sumTime(evenNumbers);
 const allSum = summary(numbers);
-const divBy3 = numbers.filter(isDivisibleBy3);
-const divBy4 = numbers.filter(isDivisibleBy4);
-const divBy5 = numbers.filter(isDivisibleBy5);
+const divBy3 = numbers.filter(isDivisibleBy(3));
+const divBy4 = numbers.filter(isDivisibleBy(4));
+const divBy5 = numbers.filter(isDivisibleBy(5));
 
 const maxnumber3 = (divBy3) => { return divBy3.reduce((max, current) => Math.max(max, current))};
 const maxnumber4 = (divBy4) => { return divBy4.reduce((max, current) => Math.max(max, current))};
 const maxnumber5 = (divBy5) => { return divBy5.reduce((max, current) => Math.max(max, current))};
 
 const largestDivBy3 = maxnumber3(divBy3);
-const largestDivBy4 = maxnumber3(divBy4);
-const largestDivBy5 = maxnumber3(divBy5);
+const largestDivBy4 = maxnumber4(divBy4);
+const largestDivBy5 = maxnumber5(divBy5);
 
 console.log(numbers);
 console.log(evenNumbers);
