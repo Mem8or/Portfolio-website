@@ -81,8 +81,11 @@ footer{
 }
 
 .jump{
-    transition: 1s all ease-in-out;
     padding: 0;
+}
+
+.link:hover{
+    color: #566f85;
 }
 
 .expandible{
@@ -101,6 +104,10 @@ footer{
     margin-left: 20px;
     margin-right: 20px;
     background-color: #461b37;
+}
+
+.expandiblePreview:hover{
+    background-color: #552544;
 }
 
 .expandibleContent, p, h1, h2{
@@ -149,6 +156,10 @@ footer{
     height: max-content;
     background-color: #348731;
     cursor: pointer;
+}
+
+.pagelink:hover{
+    background-color: #4aa447;
 }
 
 .pagelinktext{
@@ -223,4 +234,8 @@ footer{
     border: none;
     margin-bottom: 30px;
     padding: 5px;
+}
+
+#submitbutton:hover{
+    background-color: #4aa447;
 }

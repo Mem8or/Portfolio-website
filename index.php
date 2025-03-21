@@ -8,8 +8,8 @@
     </head>
     <body>
         <nav id="menu">
-            <h2><a class="jump" href="#projects">Projecten</a></h2>
-            <h2><a class="jump" href="#contact">Contact</a></h2>
+            <h2 class="link"><a class="link" class="jump" href="#projects">Projecten</a></h2>
+            <h2 class="link"><a class="link" class="jump" href="#contact">Contact</a></h2>
         </nav>
         
         <section id="intro">
@@ -40,7 +40,7 @@
     </body>
     <footer>
         <img src="./images/github.svg" class="icon">
-        <h2><a href="https://github.com/Mem8or" target="_blank">Github</a></h2>
+        <h2><a class="link" href="https://github.com/Mem8or" target="_blank">Github</a></h2>
         <a class="hidden" href="includes/login.php">CMS</a>
     </footer>
 </html>

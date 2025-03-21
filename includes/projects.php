@@ -7,7 +7,7 @@
             'image' => 'images/php.svg', 
             'imageAlt' => 'projectImage', 
             'title' => 'PHP Adresbalk opdracht:', 
-            'description' => 'Een opdracht van de les adresbalken van mijn codecrashers opleiding.', 
+            'description' => 'Een opdracht over adresbalken van mijn codecrashers opleiding.', 
             'links' => ['php Adresbalk/index.php'], 
             'content' => 'In deze opdracht heb ik de webpagina opnieuw geschreven zodat op basis van de zoekbalk verschillende pagina\'s worden ingeladen als data. Hiermee is het ook mogelijk om specifiek de pagina aan te duiden zonder bestandtypes.'
         ],
