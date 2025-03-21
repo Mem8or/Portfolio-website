@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+}
+html {
+	font-size: 24px;
+}
+body{
+	background-image: url('../images/mass-effect-andromeda.jpg');
+	background-repeat: no-repeat;
+}
+#container{
+	width: 840px;
+	height: 600px;
+	background-color: rgba(201, 207, 209, 0.5);
+	margin: 0 auto;
+	padding: 20px 60px;
+}
+table, td, th{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+table{
+	width: 800px;
+	margin: 20px auto;
+}
+th, td {
+	padding: 10px;
+}
+th{
+	height: 50px;
+	font-size: 1.2em;
+	color: white;
+}
+table tr td:first-of-type{
+	width: 110px;
+	font-weight: bold;
+}

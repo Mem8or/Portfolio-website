@@ -1,0 +1,105 @@
+@font-face {
+	src: url("../fonts/batmfa__.ttf");
+	font-family: Batman Forever;
+}
+html, body {
+	font-family: 'Batman Forever', Arial, sans-serif;
+	font-size: 20px;
+	background-color: rgb(0, 0, 0);
+	margin: 0;
+	padding: 0;
+}
+#container {
+	margin: 0 auto;
+	max-width: 100%;
+	background-color: rgb(40, 40, 40);
+}
+
+/* De CSS voor de header */
+header {
+	height: 400px;
+	background-color: black;
+	background-image: url("../images/1292-Batman-DC_Comics.jpg");
+	background-size: cover;
+	background-position: 50% 60%;
+	position: relative;
+}
+header span {
+	text-transform: uppercase;
+	color: white;
+	font-size: 3em;
+	position: absolute;
+	right: 10%;
+	top: 30%;
+}
+
+/* De CSS voor het menu */
+nav {
+	position: sticky;
+	top: 0;
+	flex: 1 0 auto;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between; 
+}
+nav ul li {
+	box-sizing: border-box;
+	position: relative;
+	flex: 1;
+	text-align: center;
+}
+nav ul li a {
+	color: white;
+	text-decoration: none;
+	background-color: rgb(0, 0, 0);	
+	padding: 20px 20px;	
+	display: block;
+	height: 40px;
+}
+nav ul li a.current {
+	background-color: rgb(80, 20, 20);
+}
+nav ul li a:hover {
+	background-color: rgb(60, 60, 60);
+}
+
+/* De CSS voor de content */
+main {
+	min-height: 400px;
+	display: flex;
+	flex-direction: row;
+}
+main img {
+	max-width: 100%;
+	max-height: 600px;
+}
+section {
+	padding: 50px;
+	flex: 1;
+}
+section:nth-child(2){
+	flex: 2;
+}
+main h1 {
+	text-shadow: 0px 0px 3px red;
+}
+
+/* De CSS voor de footer */
+footer {
+	height: 40px;
+	background-color: rgb(0, 0, 0);
+	background-image: linear-gradient(to bottom, rgb(40,40,40), rgb(0,0,0));
+}
+
+/* Voor responsive designs */
+@media screen and (max-width: 1000px){
+	main {
+		flex-direction: column;
+	}
+}

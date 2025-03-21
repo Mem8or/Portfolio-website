@@ -11,11 +11,19 @@
             <h2><a class="jump" href="#projects">Projecten</a></h2>
             <h2><a class="jump" href="#contact">Contact</a></h2>
         </nav>
-
+        
         <section id="intro">
             <h1>Over mij:</h1>
             <img id="portrait" src="images/portrait.jpg" alt="Portrait">
-            <p class="text">Hallo mijn naam is Gert van Til, ik ben een web-developer met ervaring in: HTML, CSS, JAVASCRIPT en PHP.</p>
+            <p class="text">
+                Hallo mijn naam is Gert van Til, ik ben een web-developer met ervaring in: HTML, CSS, JAVASCRIPT en PHP.<br>
+                Op deze website is het mogelijk om een paar van mijn afgemaakte opdrachten te bekijken.<br>
+                Het is ook mogelijk om contact op te nemen via het contactformulier.<br>
+                <br>
+                Naast development heb ik ook een oog voor design en mediavormgeving, ik ben ook gezellig en fijn om mee te werken.<br>
+                <br>
+                Ik hoop dat deze website een goed dee geeft wat van mij verwacht kan worden.
+            </p>
         </section>
 
         <section id="projects">
@@ -25,16 +33,14 @@
         </section>
         
         <section id="contact">
-        <hr>
-        <h1>Contact:</h1>
-        <?php include("./includes/contact.php");?>
+            <hr>
+            <h1>Contact:</h1>
+            <?php include("./includes/contact.php");?>
         </section>
     </body>
     <footer>
-        
-    <img src="./images/github.svg" class="icon">
-    <h2><a href="https://github.com/Mem8or" target="_blank">Github</a></h2>
-
+        <img src="./images/github.svg" class="icon">
+        <h2><a href="https://github.com/Mem8or" target="_blank">Github</a></h2>
         <a class="hidden" href="includes/login.php">CMS</a>
     </footer>
 </html>

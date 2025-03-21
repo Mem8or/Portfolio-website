@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+	src: url("../font/Sofia\ Pro\ Light\ Az.otf");
+	font-family: "Sofia Pro light";
+}
+
+
+main {
+    display: grid;
+    width: 100%;
+}
+
+.background {
+    background-color: white;
+}
+
+body {
+    font-family: "Sofia Pro light" ;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: white;
+    padding: 3%;
+    width: 100%;
+    height: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #E4E4E4;
+    padding: 3%;
+    width: 100%;
+    min-width: 100%;
+    left: 0;           
+}
+
+.logo, .navicon, .bag {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    max-height: 100%;
+}
+
+.footerlogo {
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.navicon img, .bag img {
+    height: 100%;
+    max-height: 100%;
+}
+
+#storepage{
+    padding-left: 3%;
+}
+
+#headImage {
+    width: 100%;
+    height: auto;
+    padding-bottom: 2%;
+}
+
+#secondaryImages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 2%;
+}
+
+.secondaryImages {
+    width: 22%;
+    box-sizing: border-box;
+    opacity: 0.5;
+    padding-bottom: 6%;
+}
+
+#selectedimage {
+    opacity: 1.0;
+}
+
+#itemtitle{
+    white-space: wrap;
+    max-width: 90%;
+    display: flex;
+    font-size: 140%;
+    padding-right: 10%;
+}
+
+section {
+    width: 100%;
+
+}
+
+#inlinewrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    gap: 10%;
+    padding-bottom: 5%;
+}
+
+h1{
+    font-size: 140%;
+    padding-bottom: 6%;
+}
+
+h4{
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+p{
+    line-height: 150%;
+    font-size: 90%;
+}
+
+.textspaced {
+    margin-bottom: 7%;
+    margin-right: 5%;
+}
+
+.greyed {
+    color: #767676;
+    padding-right: 3%;
+    display: inline-flex;
+}
+
+div{
+    width: 100%;
+    height: min-content;
+}
+
+#Purchasebar {
+    display: flex;
+    flex-direction: row;
+    height: 20%; 
+    justify-content: space-between;
+}
+
+button {
+    font-family: "Sofia Pro light", -apple-system;
+    width: 60%;
+    background-color: #222222;
+    border: none;
+    color: white;
+    font-size: 90%;
+    text-decoration: none;
+    padding: 3%;
+    cursor: pointer;
+    margin-right: 3%;
+}
+
+button:hover {
+    background-color: darkgray;
+}
+
+#quantity {
+    width: auto;
+    height: 40%;
+}
+
+#Sharebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    height: 10%; 
+    padding: 10px; 
+    justify-content: space-between;
+    padding-right: 40%;
+}
+
+#email {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    height: 10%; 
+    padding: 10px; 
+    justify-content: space-between;
+    background-color: white;
+}
+
+.email p {
+    padding-bottom: none;
+}
+
+.tags {
+    display: flex;
+    align-items: left;
+    padding-bottom: 0px;
+}
+#infolists > div {
+    width: auto;
+}
+
+#infolists {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 25%;
+}
+
+#baseinformation{
+    padding-bottom: 6%;
+}
+
+#language{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#currency {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#footerlogo {
+    margin-top: 5%;
+    margin-bottom: 4%;
+}
+
+#infolists ul {
+    margin-bottom: 5%;
+}
+
+.paymentimage {
+    max-width: 80%;
+}

@@ -7,6 +7,7 @@
     
         if (isset($_POST['submit'])){
             if(!empty($_POST['name']) and !empty($_POST['email']) and !empty($_POST['message'])){
+                //wanneer de form ingevuld is word de data toegevoegd aan $messages voor verwerking in de cms
             $messages[] = ['name' => htmlspecialchars($_POST['name']), 'email' => htmlspecialchars($_POST['email']), 'message' => htmlspecialchars($_POST['message'])];
             $errors = '<h3 class="green">- Bericht verzonden!</h3>';
         }

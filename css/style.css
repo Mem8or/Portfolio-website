@@ -13,6 +13,38 @@ body{
     font-size: 16px;
     scroll-behavior: smooth;
 }
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+    height: min-content;
+}
+
+label{
+    color: whitesmoke;
+}
+
+form{
+    margin: 10px;
+    font-size: 20px;
+}
+
+textarea{
+    resize: none;
+    width: clamp(40vw, 500px, 90vw);
+    height: 300px;
+    border-style: none;
+    font-family: 'Segoe UI';
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: #885576;
+}
+
+textarea:focus{
+    outline: none;
+}
+
 .text{
     padding: 20px;
 }
@@ -22,10 +54,35 @@ body{
     padding: 0;
 }
 
-a{
+input{
     color: whitesmoke;
-    text-decoration: none;
+    background-color: #885576;
+    font-family: 'Segoe UI';
+    border-radius: 5px;
+    border-style: none;
+    border: 2px solid whitesmoke;
+}
+
+input:focus{
+    outline: none;
+}
+
+hr{
+    background-color: whitesmoke;
+    height: 3px;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+
+footer{
+    border-top: 3px solid whitesmoke;
+    display: flex;
+    align-content: center;
+    width: clamp(50vw, 700px, 100vw);
+    height: 75px;
     height: min-content;
+    color: whitesmoke;
+    background-color: rgb(20, 7, 16);
 }
 
 .expandible{
@@ -38,23 +95,12 @@ a{
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    background-color: #461b37;
     height: min-content;
     flex-direction: row;
     border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
-}
-
-#portrait{
-    display: flex;
-    transform: scaleX(-1);
-    width: 200px;
-    border: 5px solid;
-    border-radius: 10px;
-    border-color: whitesmoke;
-    margin: 20px;
-    float: left;
+    background-color: #461b37;
 }
 
 .expandibleContent, p, h1, h2{
@@ -84,24 +130,6 @@ a{
     border-radius: 10px;
 }
 
-#menu{
-    display: flex;
-    color: whitesmoke;
-    background-color: #140710;
-    width: clamp(50vw, 700px, 100vw);
-    height: min-content;
-    justify-content: left;
-    align-items: center;
-    border-bottom: 3px solid whitesmoke;
-}
-
-#intro, #projects, #contact{
-    color: whitesmoke;
-    background-color: #270f1f;
-    width: clamp(50vw, 700px, 100vw);
-    padding-bottom: 10vh;
-}
-
 .previewImage{
     margin: 10px;
     border: 5px solid;
@@ -124,26 +152,6 @@ a{
     padding-right: 0;
 }
 
-label{
-    color: whitesmoke;
-}
-
-form{
-    margin: 10px;
-    font-size: 20px;
-}
-
-#submitbutton{
-    background-color: #348731;
-    font-weight: bold;
-    cursor: pointer;
-    width: 150px;
-    height: max-content;
-    border: none;
-    margin-bottom: 30px;
-    padding: 5px;
-}
-
 .green{
     color: #348731;
     margin: 0;
@@ -156,64 +164,52 @@ form{
     padding-left: 10px;
 }
 
-textarea{
-    resize: none;
-    width: 45vw;
-    height: 300px;
-    border-style: none;
-    font-family: 'Segoe UI';
-    border: 2px solid whitesmoke;
-}
-
-textarea:focus{
-    outline: none;
-}
-
 .formrow{
     margin: 10px;
     margin-bottom: 20px;
 }
 
-input{
-    color: whitesmoke;
-    background-color: #885576;
-    font-family: 'Segoe UI';
-    border-radius: 5px;
-    border-style: none;
-    border: 2px solid whitesmoke;
-}
-
-input:focus{
-    outline: none;
-}
-
-hr{
-    background-color: whitesmoke;
-    height: 3px;
-    overflow-x: hidden;
-    margin-top: 20px;
-}
-
-textarea{
-    color: whitesmoke;
-    border-radius: 5px;
-    background-color: #885576;
-    font-family: 'Segoe UI';
-    width: clamp(40vw, 500px, 90vw);
-}
-
-footer{
-    border-top: 3px solid whitesmoke;
-    display: flex;
-    align-content: center;
-    color: whitesmoke;
-    background-color: rgb(20, 7, 16);
-    width: clamp(50vw, 700px, 100vw);
-    height: 75px;
-    height: min-content;
-}
-
 .hidden{
     opacity: 0;
     cursor: default;
+}
+
+#menu{
+    display: flex;
+    color: whitesmoke;
+    background-color: #140710;
+    width: clamp(50vw, 700px, 100vw);
+    height: min-content;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 3px solid whitesmoke;
+}
+
+#intro, #projects, #contact{
+    color: whitesmoke;
+    background-color: #270f1f;
+    width: clamp(50vw, 700px, 100vw);
+    padding-bottom: 10vh;
+}
+
+#portrait{
+    display: flex;
+    transform: scaleX(-1);
+    width: 200px;
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: whitesmoke;
+    margin: 20px;
+    float: left;
+}
+
+#submitbutton{
+    background-color: #348731;
+    font-weight: bold;
+    cursor: pointer;
+    width: 150px;
+    height: max-content;
+    border: none;
+    margin-bottom: 30px;
+    padding: 5px;
 }
