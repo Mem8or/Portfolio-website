@@ -80,6 +80,12 @@ footer{
     padding: 20px;
 }
 
+.linkcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .jump{
     padding: 0;
 }
@@ -104,6 +110,7 @@ footer{
     margin-left: 20px;
     margin-right: 20px;
     background-color: #461b37;
+    z-index: 10;
 }
 
 .expandiblePreview:hover{
@@ -119,22 +126,25 @@ footer{
     background-color: #885576;
     opacity: 0;
     height: 0;
-    visibility: hidden;
     overflow: hidden;
-    transition: opacity .3s ease-in-out, height 1s ease-in-out;
+    transition: height 0.3s ease-in-out, transform 0.3s ease-in-out;
     margin-bottom: 10px;
+    
 }
 
 .expandibleContentWrapper.active{
     display: flex;
     cursor: pointer;
     opacity: 1;
-    visibility: visible;
-    height: min-content;
+    transform: translateY(0);
+    transition: height 0.3s ease-in-out, transform 0.3s ease-in-out;
+    height: 150px;
     margin: 10px;
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 10px;
+    z-index: 5;
+
 }
 
 .previewImage{
