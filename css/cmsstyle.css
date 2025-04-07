@@ -1,0 +1,13 @@
+body{
+    font-family: 'Segoe UI';
+    align-items: center;
+    display: block;
+    margin: 0;
+    background-color: #ebebeb;
+}
+
+.logoutbutton{
+    border-style: none;
+    background-color: #6f6f6f6f;
+    color: white;
+}

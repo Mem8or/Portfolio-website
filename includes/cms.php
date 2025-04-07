@@ -25,7 +25,12 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <input name="Logout" type="submit" value="Logout">
         </form>
 
-        <div></div>
+        <div>
+            <h2>Content</h2>
+        </div>
+        <div>
+            <h2>Messages</h2>
+        </div>
 
 
 </html>
