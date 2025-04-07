@@ -15,8 +15,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 <html>
     <head>
-        <style></style>
         <title>CMS</title>
+        <link rel="stylesheet" href="../css/cmsstyle.css">
     </head>
-    <h1>Hi <?= htmlspecialchars($_SESSION['username']) ?></h1>
+
+        <h1>Hi <?= htmlspecialchars($_SESSION['username']) ?></h1>
+
+        <form action="../index.php" method="POST">
+            <input name="Logout" type="submit" value="Logout">
+        </form>
+
+        <div></div>
+
+
 </html>

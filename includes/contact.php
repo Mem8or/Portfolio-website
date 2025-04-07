@@ -4,11 +4,17 @@
     $setName = '';
     $setEmail = '';
     $setMessage = '';
+
+    $mysqli = new mysqli("localhost", "GertvanTil", "gert2002", "portfolio-website");
+
+    if ($mysqli->connect_error) {
+        die("Connection failed: " . $mysqli->connect_error);
+    }
     
         if (isset($_POST['submit'])){
             if(!empty($_POST['name']) and !empty($_POST['email']) and !empty($_POST['message'])){
                 //wanneer de form ingevuld is word de data toegevoegd aan $messages voor verwerking in de cms
-            $messages[] = ['name' => htmlspecialchars($_POST['name']), 'email' => htmlspecialchars($_POST['email']), 'message' => htmlspecialchars($_POST['message'])];
+            $message[] = ['name' => htmlspecialchars($_POST['name']), 'email' => htmlspecialchars($_POST['email']), 'message' => htmlspecialchars($_POST['message']), 'tad' => date('D-m-y H:i:s')];
             $errors = '<h3 class="green">- Bericht verzonden!</h3>';
         }
         else {
