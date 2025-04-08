@@ -1,0 +1,17 @@
+body {
+    font-family: 'Segoe UI';
+    display: flex;
+    flex-direction: column;
+}
+
+#messagewrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#contentwrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
