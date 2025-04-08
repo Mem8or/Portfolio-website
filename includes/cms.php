@@ -24,7 +24,6 @@ if ($dbh->connect_error){
 
     $query = "SELECT naam, email, message FROM messages";
     $result = $dbh->query($query);
-
 }
 
 
