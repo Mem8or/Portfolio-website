@@ -22,7 +22,7 @@ if ($dbh->connect_error){
 } else{
     $dbh->set_charset('utf8');
 
-    $query = "SELECT naam, email, message FROM messages";
+    $query = "SELECT * FROM messages";
     $result = $dbh->query($query);
 }
 
