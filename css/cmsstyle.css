@@ -2,16 +2,49 @@ body {
     font-family: 'Segoe UI';
     display: flex;
     flex-direction: column;
+    margin: 50px;
 }
 
-#messagewrapper {
+h2{
+    padding-left: 10px;
+}
+
+.button{
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 6px;
+    width: max-content;
+    height: max-content;
+}
+
+.button:hover{
+    background-color: rgb(204, 204, 204);
+    cursor: pointer;
+}
+
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;         
+    flex-direction: row;     
+    gap: 1vw;                    
+    justify-content: space-between;
+}
+
+.column {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    width: 45vw;
+    border: 2px solid black;
+    border-radius: 6px;
 }
 
-#contentwrapper {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+#messages {
+    
+}
+
+#content {
+
 }

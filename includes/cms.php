@@ -4,9 +4,10 @@ $user = 'GertvanTil';
 $pass = 'gert2002';
 $db = 'portfolio-website';
 $output = '';
+$clearance = false;
 
 session_set_cookie_params([
-    'lifetime' => 1,
+    'lifetime' => 100,
     'samesite' => 'Strict'
 ]);
 
@@ -22,8 +23,33 @@ if ($dbh->connect_error){
 } else{
     $dbh->set_charset('utf8');
 
-    $query = "SELECT * FROM messages";
-    $result = $dbh->query($query);
+    $messagequery = "SELECT * FROM messages";
+    $messages = $dbh->query($messagequery);
+
+    $projectsResult = $dbh->query("SELECT * FROM projects");
+    $linksResult = $dbh->query("SELECT * FROM project_links");
+
+    $projectLinks = [];
+while ($linkRow = $linksResult->fetch_assoc()) {
+    $projectId = $linkRow['project_id'];
+    if (!isset($projectLinks[$projectId])) {
+        $projectLinks[$projectId] = [];
+    }
+    $projectLinks[$projectId][] = $linkRow['link'];
+}
+
+$projects = [];
+while ($row = $projectsResult->fetch_assoc()) {
+    $projectId = $row['id'];
+    $projects[] = [
+        'image' => $row['image'],
+        'imageAlt' => $row['imageAlt'],
+        'title' => $row['title'],
+        'description' => $row['description'],
+        'links' => $projectLinks[$projectId] ?? [],
+        'content' => $row['content']
+    ];
+}
 }
 
 
@@ -45,18 +71,40 @@ if (isset($_POST['Logout'])){
         <link rel="stylesheet" href="../css/cmsstyle.css">
     </head>
 
+    <div>
         <h1>Hi <?= htmlspecialchars($_SESSION['username']) ?></h1>
 
         <form action="../index.php" method="POST">
-            <input name="Logout" type="submit" value="Logout">
+            <input name="Log out" type="submit" value="Logout" class="button">
         </form>
+    </div>
 
-        <div id="contentwrapper">
-            <h2>Content</h2>
+
+    <div id="wrapper">
+        <div id="content" class="column">
+            <h2>Content:</h2>
+            <?php
+                $output .= '<form method="post">';
+                if(!empty($projects)){    
+                    foreach($projects as $project){
+                        $links = '';
+                        foreach($project['links'] as $link){
+                            $links .= '<input type="text" value="'. $link .'"><br>';
+                        }
+            
+                    $output .= '<input type="text" value="'. $project['image'] .'"><br><input type="text" value="'. $project['imageAlt'].'"><br><input type="text" value="'. $project['title'].'"><br><input type="text" value="'. $project['description'].'"><br>';
+                    $output .= '<div>'. $links .'</div><br>
+                    <textarea>'. $project['content'] .'</textarea>';
+                }};
+                $output .= '<form>';
+                echo $output;
+            ?>
         </div>
-        <div id="messagewrapper">
-            <h2>Messages</h2>
+        <div id="messages" class="column">
+            <h2>Messages:</h2>
         </div>
+    </div>
+
 
 
 </html>
