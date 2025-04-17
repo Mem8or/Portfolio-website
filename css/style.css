@@ -200,11 +200,6 @@ footer{
     margin-bottom: 20px;
 }
 
-.hidden{
-    opacity: 0;
-    cursor: default;
-}
-
 #menu{
     display: flex;
     color: whitesmoke;

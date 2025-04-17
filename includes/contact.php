@@ -1,9 +1,11 @@
 <?php
-    $messages = [];
     $errors = '';
-    $setName = '';
-    $setEmail = '';
-    $setMessage = '';
+    $name = '';
+    $email = '';
+    $message = '';
+    $sname = '';
+    $semail = '';
+    $smessage = '';
 
     $mysqli = new mysqli("localhost", "GertvanTil", "gert2002", "portfolio-website");
 
@@ -13,11 +15,28 @@
     
         if (isset($_POST['submit'])){
             if(!empty($_POST['name']) and !empty($_POST['email']) and !empty($_POST['message'])){
-                //wanneer de form ingevuld is word de data toegevoegd aan $messages voor verwerking in de cms
-            $message[] = ['name' => htmlspecialchars($_POST['name']), 'email' => htmlspecialchars($_POST['email']), 'message' => htmlspecialchars($_POST['message']), 'tad' => date('D-m-y H:i:s')];
-            $errors = '<h3 class="green">- Bericht verzonden!</h3>';
+
+                $name = htmlspecialchars($_POST['name']);
+                $email = htmlspecialchars($_POST['email']);
+                $message = htmlspecialchars($_POST['message']);
+                $tad = date('Y-m-d H:i:s');
+
+                $stmt = $mysqli->prepare("INSERT INTO messages (name, email, message, tad) VALUES (?, ?, ?, ?)");
+                $stmt->bind_param("ssss", $name, $email, $message, $tad);
+        
+                if ($stmt->execute()) {
+                    $errors = '<h3 class="green">- Bericht verzonden!</h3>';
+                } else {
+                    $errors = '<h3 class="red">- Er was een probleem met uw bericht versturen!</h3><br>' . $stmt->error;
+                }
+
+                $stmt->close();
+                $dbh->close();
         }
         else {
+            $sname = htmlspecialchars($_POST['name']);
+            $semail = htmlspecialchars($_POST['email']);
+            $smessage = htmlspecialchars($_POST['message']);
             if(empty($_POST['name'])){
                 $errors .= '<h3 class="red">- Naam is niet ingevuld!</h3><br>';
             }
@@ -28,19 +47,18 @@
                 $errors .= '<h3 class="red">- Bericht niet ingevuld!</h3><br>';
             }
         }
-        $setName = htmlspecialchars($_POST['name']);
-        $setEmail = htmlspecialchars($_POST['email']);
-        $setMessage = htmlspecialchars($_POST['message']);
+
+
     }
 ?>
 <html>
     <form action="#contact" method="post">
         <label class="formrow" for="name">Naam: </label><br>
-        <input class="formrow" type="text" name="name" value="<?= $setName?>"><br>
+        <input class="formrow" type="text" name="name" value="<?= $sname?>"><br>
         <label class="formrow" for="email">E-mail: </label><br>
-        <input class="formrow" type="email" name="email" value="<?= $setEmail?>"><br>
+        <input class="formrow" type="email" name="email" value="<?= $semail?>"><br>
         <label class="formrow" for="message">Bericht: </label><br>
-        <textarea class="formrow" name="message" id="message" rows="20" cols="50"><?= $setMessage?></textarea><br>
+        <textarea class="formrow" name="message" id="message" rows="20" cols="50"><?= $smessage?></textarea><br>
         <input class="formrow" name="submit" type="submit" id="submitbutton" value="Versturen" >
         <?= $errors?>
     </form>

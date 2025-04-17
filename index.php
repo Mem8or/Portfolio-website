@@ -41,6 +41,6 @@
     <footer>
         <img src="./images/github.svg" class="icon">
         <h2><a class="link" href="https://github.com/Mem8or" target="_blank">Github</a></h2>
-        <a class="hidden" href="includes/login.php">CMS</a>
+        <h2><a class="link" href="includes/login.php">CMS</a></h2>
     </footer>
 </html>
