@@ -84,19 +84,22 @@ if (isset($_POST['Logout'])){
         <div id="content" class="column">
             <h2>Content:</h2>
             <?php
-                $output .= '<form method="post">';
+
                 if(!empty($projects)){    
                     foreach($projects as $project){
                         $links = '';
                         foreach($project['links'] as $link){
                             $links .= '<input type="text" value="'. $link .'"><br>';
                         }
+                        
+                    $output .= '<form method="post">';
             
-                    $output .= '<input type="text" value="'. $project['image'] .'"><br><input type="text" value="'. $project['imageAlt'].'"><br><input type="text" value="'. $project['title'].'"><br><input type="text" value="'. $project['description'].'"><br>';
-                    $output .= '<div>'. $links .'</div><br>
-                    <textarea>'. $project['content'] .'</textarea>';
+                    $output .= '<input type="text" value="'. $project['image'] .'"><br><input type="text" value="'. $project['imageAlt'].'"><br><input type="text" value="'. $project['title'].'"><br><textarea>'. $project['description'].'</textarea><br>';
+                    $output .= '<div>'. $links .'</div>
+                    <textarea>'. $project['content'] .'</textarea><br><br>';
+                    $output .= '<form>';
                 }};
-                $output .= '<form>';
+
                 echo $output;
             ?>
         </div>

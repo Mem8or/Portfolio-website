@@ -9,6 +9,19 @@ h2{
     padding-left: 10px;
 }
 
+input{
+    width: 20vw;
+}
+
+textarea{
+    width: 20vw;
+    height: 10vh;
+}
+
+form{
+    border: 2px solid black;
+}
+
 .button{
     font-family: 'Segoe UI';
     font-weight: bold;
@@ -34,17 +47,8 @@ h2{
 
 .column {
     flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
     width: 45vw;
     border: 2px solid black;
     border-radius: 6px;
-}
-
-#messages {
-    
-}
-
-#content {
-
+    height: max-content;
 }
