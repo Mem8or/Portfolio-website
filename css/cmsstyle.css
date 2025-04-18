@@ -1,54 +1,146 @@
-body {
+html{
     font-family: 'Segoe UI';
+}
+
+body {
     display: flex;
     flex-direction: column;
     margin: 50px;
 }
 
-h2{
-    padding-left: 10px;
+#logout{
+    margin: 0;
+    height: 50px;
+    width: 21vw;
+    background-color: white;
+    font-weight: bold;
+}
+#logout:hover {
+     font-weight: bolder;
+     cursor: pointer;
+     background-color: rgb(240, 164, 164);
 }
 
+
 input{
+    font-family: 'Segoe UI';
     width: 20vw;
+    height: 2em;
+    border: 2px solid black;
+    border-radius: 6px;
 }
 
 textarea{
+    font-family: 'Segoe UI';
     width: 20vw;
-    height: 10vh;
+    height: 150px;
+    resize: none;
+    border: 2px solid black;
+    border-radius: 6px;
+}
+
+.formwrapper{
+    flex-direction: column;
+    padding: .5vw;
+    margin: 0;
+    border: 2px solid black;
+    border-radius: 6px;
+    max-width: 20vw;
+
+    background-color: rgb(220, 245, 248);
+}
+
+.titlebar{
+    width: 43vw;
 }
 
 form{
-    border: 2px solid black;
+    padding: 0;
+    margin: 0;
+}
+
+label{
+    max-width: 20vw;
 }
 
 .button{
-    font-family: 'Segoe UI';
     font-weight: bold;
     border: 2px solid black;
     background-color: white;
     border-radius: 6px;
-    width: max-content;
-    height: max-content;
+    width: 100%;
+    height: 50px;
+    max-width: 20vw;
 }
 
 .button:hover{
-    background-color: rgb(204, 204, 204);
+    background-color: rgb(172, 252, 183);
     cursor: pointer;
+    transition: ease-in-out 0.5s;
+    font-weight: bolder;
+}
+
+.button:disabled{
+    background-color: rgb(240, 164, 164);
+    cursor: default;
+}
+
+.deletebutton{
+    height: 50px;
+    width: 50px;
+    aspect-ratio: 1/1;
+    background-image: url("../images/delete-closed.svg");
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 6px;
+    transition: ease-in-out 0.5s;
+}
+
+.deletebutton:hover {
+    cursor: pointer;
+    background-image: url("../images/delete-open.svg");
+    background-color: rgb(240, 164, 164);
+}
+
+.deletebutton:disabled {
+    background-image: url("../images/delete-closed.svg");
+    background-color: rgb(240, 164, 164);
+    color: black;
+    cursor: default;
+}
+
+
+.buttonrow {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: 100%;
+    margin-top: 10px;
 }
 
 #wrapper {
     display: flex;
     flex-wrap: wrap;         
     flex-direction: row;     
-    gap: 1vw;                    
-    justify-content: space-between;
+    justify-content: space-between;                
+}
+
+#user {
+    margin-bottom: 20px;
+    padding: .5vw;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 21vw;
 }
 
 .column {
+    padding: .5vw;
+    display: flex;
+    gap: .5vw;
     flex-direction: row;
-    width: 45vw;
+    flex-wrap: wrap;
+    width: min-content;
+    min-width: 500px;
     border: 2px solid black;
     border-radius: 6px;
-    height: max-content;
 }
