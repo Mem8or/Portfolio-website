@@ -5,6 +5,7 @@ $pass = 'gert2002';
 $db = 'portfolio-website';
 $output = '';
 $clearance = false;
+$clearanceMsg = '';
 $submitstate = '';
 
 session_set_cookie_params([
@@ -23,8 +24,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 // clearance check
 if ($_SESSION['clearance'] == true){
     $clearance = true;
+    $clearanceMsg = '1: <br>You can view and edit projects and messages.';
 } else{
     $clearance = false;
+    $clearanceMsg = '0: <br>You can view Projects and messages.';
 }
 
 // uitzetten van submit en delete buttons als clearance false is
@@ -96,11 +99,9 @@ if (isset($_POST['logout'])){
         <link rel="stylesheet" href="../css/cmsstyle.css">
     </head>
 
-    <pre><?php print_r($_SESSION); ?></pre>
-
     <div id="User">
         <h1>Hi <?= htmlspecialchars($_SESSION['username']) ?></h1>
-        <p>Your clearance is: <?= $clearance?></p>
+        <p>Your clearance is <?= $clearanceMsg?></p>
 
         <form action="../index.php" method="POST">
             <input name="logout" id="logout" type="submit" value="Logout">
@@ -131,21 +132,21 @@ if (isset($_POST['logout'])){
                     <form method="post" name="'. $project['id'] .'">
 
                     <label for="img">Image src: </label><br>
-                    <input type="text" name="img" value="'. $project['image'] .'"><br>
+                    <input type="text" name="img" value="'. $project['image'] .'"><br><hr>
 
                     <label for="imgalt">Image description: </label><br>
-                    <input type="text" name="imgalt" value="'. $project['imageAlt'].'"><br>
+                    <input type="text" name="imgalt" value="'. $project['imageAlt'].'"><br><hr>
 
                     <label for="title">Title: </label><br>
-                    <input type="text" name="title" value="'. $project['title'].'"><br>
+                    <input type="text" name="title" value="'. $project['title'].'"><br><hr>
 
                     <label for="projectdesc">Project description: </label><br>
-                    <textarea name="projectdesc">'. $project['description'].'</textarea><br>
+                    <textarea name="projectdesc">'. $project['description'].'</textarea><br><hr>
 
-                    <div>'. $links .'</div>
+                    <div>'. $links .'</div><hr>
 
                     <label for="content">Content: </label><br>
-                    <textarea name="content">'. $project['content'] .'</textarea><br>
+                    <textarea name="content">'. $project['content'] .'</textarea><br><hr>
 
                     <div class="buttonrow">
                     <input type="submit" class="button" name="submit-button" value="Push changes" '. $submitstate .'>

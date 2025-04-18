@@ -46,8 +46,6 @@ textarea{
     border: 2px solid black;
     border-radius: 6px;
     max-width: 20vw;
-
-    background-color: rgb(220, 245, 248);
 }
 
 .titlebar{
@@ -76,7 +74,7 @@ label{
 .button:hover{
     background-color: rgb(172, 252, 183);
     cursor: pointer;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.25s;
     font-weight: bolder;
 }
 
@@ -90,10 +88,10 @@ label{
     width: 50px;
     aspect-ratio: 1/1;
     background-image: url("../images/delete-closed.svg");
-    background-color: transparent;
     border: 2px solid black;
     border-radius: 6px;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.25s;
+    background-color: white;
 }
 
 .deletebutton:hover {
