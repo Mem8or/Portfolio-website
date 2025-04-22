@@ -265,7 +265,7 @@ if (isset($_POST['logout'])){
                         <div class="buttonrow">
                         <form method="post" name="'. $message['id'] .'">
                         <input type="submit" class="deletebutton" onclick="return confirm(\'Are you sure you want to delete this message?\');" name="delete-button" value="" '. $submitstate .'>
-                        </form></div></div>';
+                        </form></div></div><hr>';
                     };
                 }
 

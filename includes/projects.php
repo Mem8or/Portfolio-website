@@ -1,8 +1,12 @@
 <?php
-    $server = '185.27.134.119';
-    $user = 'if0_38517269';
-    $pass = 'cOpyieE84vpv0H';
-    $db = 'if0_38517269_database';
+    // $server = '185.27.134.119';
+    // $user = 'if0_38517269';
+    // $pass = 'cOpyieE84vpv0H';
+    // $db = 'if0_38517269_database';
+    $server = 'localhost';
+    $user = 'GertvanTil';
+    $pass = 'gert2002';
+    $db = 'portfolio-website';
     $output = '';
     
     $dbh = new mysqli($server, $user, $pass, $db);
@@ -19,12 +23,11 @@
     $projectLinks = [];
     while ($linkRow = $linksResult->fetch_assoc()) {
     $projectId = $linkRow['project_id'];
-
     if (!isset($projectLinks[$projectId])) {
         $projectLinks[$projectId] = [];
     }
     $projectLinks[$projectId][] = $linkRow['link'];
-    }
+}
 
 $projects = [];
 while ($row = $projectsResult->fetch_assoc()) {
