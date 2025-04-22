@@ -71,10 +71,6 @@ hr{
     gap: .5vw;
 }
 
-.disabled{
-    visibility: hidden;
-}
-
 .message{
     flex-direction: column;
     padding: .5vw;

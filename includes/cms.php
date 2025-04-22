@@ -1,8 +1,8 @@
 <?php
-$server = 'localhost';
-$user = 'GertvanTil';
-$pass = 'gert2002';
-$db = 'portfolio-website';
+$server = '185.27.134.119';
+$user = 'if0_38517269';
+$pass = 'cOpyieE84vpv0H';
+$db = 'if0_38517269_database';
 $output = '';
 $messageoutput = '';
 $clearance = false;
