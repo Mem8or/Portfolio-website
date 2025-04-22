@@ -14,7 +14,7 @@
         $dbh->set_charset('utf8');
     }
 
-    $projectsResult = $dbh->query("SELECT * FROM projects");
+    $projectsResult = $dbh->query("SELECT * FROM projects WHERE visible = 1 ORDER BY title ASC");
     $linksResult = $dbh->query("SELECT * FROM project_links");
 
     $projectLinks = [];
@@ -49,7 +49,7 @@ while ($row = $projectsResult->fetch_assoc()) {
             }
 
         // content voor in de preview
-        $output .= '<div class="expandible"> <div class="expandiblePreview"> <img class="previewImage" src="'. $project['image'] .'" alt="'. $project['imageAlt'] .'"> <div class="previewtext"><h2>'. $project['title'] .'</h2><p>'. $project['description'] .'</p></div></div>';
+        $output .= '<div class="expandible"> <div class="expandiblePreview"> <img class="previewImage" src="'. $project['image'] .'" alt="'. $project['imageAlt'] .'"> <div class="previewtext"><h2>'. $project['title'] .':</h2><p>'. $project['description'] .'</p></div></div>';
         // content in het uitklapbare gedeelte
         $output .= '<div class="expandibleContentWrapper">
         <div class="linkcontainer">'. $links .'</div>

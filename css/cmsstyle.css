@@ -1,5 +1,6 @@
 html{
     font-family: 'Segoe UI';
+    scroll-behavior: smooth;
 }
 
 body {
@@ -21,10 +22,9 @@ body {
      background-color: rgb(240, 164, 164);
 }
 
-
 input{
     font-family: 'Segoe UI';
-    width: 20vw;
+    width: 100%;
     height: 2em;
     border: 2px solid black;
     border-radius: 6px;
@@ -32,11 +32,27 @@ input{
 
 textarea{
     font-family: 'Segoe UI';
-    width: 20vw;
+    width: 100%;
     height: 150px;
     resize: none;
     border: 2px solid black;
     border-radius: 6px;
+}
+
+h2{
+    margin-top: .5vw;
+    margin-bottom: .5vw;
+}
+
+p{
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: .25vw;
+    margin-top: .5;
+}
+
+hr{
+    width: 100%;
 }
 
 .formwrapper{
@@ -45,11 +61,35 @@ textarea{
     margin: 0;
     border: 2px solid black;
     border-radius: 6px;
-    max-width: 20vw;
+    min-width: 20vw;
+    max-width: 100%;
+}
+
+#messages {
+    display: flex;
+    flex-direction: column;
+    gap: .5vw;
+}
+
+.disabled{
+    visibility: hidden;
+}
+
+.message{
+    flex-direction: column;
+    padding: .5vw;
+    margin: 0;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: max-content;
 }
 
 .titlebar{
+    display: flex;
     width: 43vw;
+    height: min-content;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 form{
@@ -66,9 +106,8 @@ label{
     border: 2px solid black;
     background-color: white;
     border-radius: 6px;
-    width: 100%;
     height: 50px;
-    max-width: 20vw;
+    width: 100%;
 }
 
 .button:hover{
@@ -79,6 +118,29 @@ label{
 }
 
 .button:disabled{
+    background-color: rgb(240, 164, 164);
+    cursor: default;
+}
+
+.addbutton{
+    height: 50px;
+    width: 50px;
+    aspect-ratio: 1/1;
+    background-image: url("../images/plus.svg");
+    border: 2px solid black;
+    border-radius: 6px;
+    transition: ease-in-out 0.25s;
+    background-color: white;
+}
+
+.addbutton:hover{
+    background-color: rgb(172, 252, 183);
+    cursor: pointer;
+    transition: ease-in-out 0.25s;
+    font-weight: bolder;
+}
+
+.addbutton:disabled{
     background-color: rgb(240, 164, 164);
     cursor: default;
 }
@@ -107,11 +169,45 @@ label{
     cursor: default;
 }
 
+.visiblebutton {
+    height: 50px;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border: 2px solid black;
+    border-radius: 6px;
+    transition: ease-in-out 0.25s;
+    background-color: white;
+}
+
+.visiblebutton:disabled {
+    background-color: rgb(240, 164, 164);
+    color: black;
+    cursor: default;
+}
+
+.state0 {
+    background-image: url(../images/notvisible.svg);
+}
+
+.state1 {
+    background-image: url(../images/visible.svg);
+}
+
+.state0:not(:disabled):hover {
+    background-image: url(../images/visible.svg);
+    cursor: pointer;
+}
+
+.state1:not(:disabled):hover {
+    background-image: url(../images/notvisible.svg);
+    cursor: pointer;
+}
 
 .buttonrow {
     display: flex;
     flex-direction: row;
     gap: 5px;
+    max-width: 20vw;
     width: 100%;
     margin-top: 10px;
 }
@@ -123,12 +219,13 @@ label{
     justify-content: space-between;                
 }
 
-#user {
+.user {
     margin-bottom: 20px;
     padding: .5vw;
     border: 2px solid black;
     border-radius: 6px;
     width: 21vw;
+    background-color: white;
 }
 
 .column {
@@ -141,4 +238,5 @@ label{
     min-width: 500px;
     border: 2px solid black;
     border-radius: 6px;
+    background-color: white;
 }

@@ -41,7 +41,8 @@
         <link rel="stylesheet" href="../css/cmsstyle.css">
     </head>
     <body>
-    <h2>Login</h2>
+    <div class="user">
+        <h2>Login</h2>
         <form action="login.php" method="POST">
             <label for="username">Username:</label><br>
             <input type="text" name="username" id="username" required><br><br>
@@ -49,5 +50,7 @@
             <input type="password" name="password" id="password" required><br><br>
             <input type="submit" value="Login" class="button">
         </form>
+    </div>
+
     </body>
 </html>
