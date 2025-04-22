@@ -18,13 +18,14 @@
     $linksResult = $dbh->query("SELECT * FROM project_links");
 
     $projectLinks = [];
-while ($linkRow = $linksResult->fetch_assoc()) {
+    while ($linkRow = $linksResult->fetch_assoc()) {
     $projectId = $linkRow['project_id'];
+    
     if (!isset($projectLinks[$projectId])) {
         $projectLinks[$projectId] = [];
     }
     $projectLinks[$projectId][] = $linkRow['link'];
-}
+    }
 
 $projects = [];
 while ($row = $projectsResult->fetch_assoc()) {
