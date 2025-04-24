@@ -1,15 +1,11 @@
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+     clearance BOOLEAN NOT NULL DEFAULT 0
+);
 
-CREATE TABLE `users` (
-  `username` varchar(30) NOT NULL,
-  `password` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-INSERT INTO 'users' ('username', 'password') VALUES
-('admin', 'iamadministrator'),
-('guest', 'guest');
-
-COMMIT;
+INSERT INTO users (username, password, clearance) VALUES
+('admin', 'iamadministrator', TRUE),
+('guest', 'guest', FALSE);
