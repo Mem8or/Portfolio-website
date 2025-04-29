@@ -50,7 +50,7 @@ if ($dbh->connect_error){
     $dbh->set_charset('utf8');
 
     // ophalen van messages en het in een array zetten
-    $messagequery = "SELECT * FROM messages";
+    $messagequery = "SELECT * FROM messages ORDER BY tad ASC";
     $messageResult = $dbh->query($messagequery);
 
     $messages = [];
@@ -68,18 +68,6 @@ if ($dbh->connect_error){
 
     // ophalen van projects en het in een array zetten
     $projectsResult = $dbh->query("SELECT * FROM projects");
-    $linksResult = $dbh->query("SELECT * FROM project_links");
-
-    $projectLinks = [];
-    while ($linkRow = $linksResult->fetch_assoc()) {
-    $projectId = $linkRow['project_id'];
-
-    if (!isset($projectLinks[$projectId])) {
-        $projectLinks[$projectId] = [];
-    }
-
-    $projectLinks[$projectId][] = $linkRow['link'];
-    }
 
     $projects = [];
     while ($row = $projectsResult->fetch_assoc()) {
@@ -91,7 +79,7 @@ if ($dbh->connect_error){
         'imageAlt' => $row['imageAlt'],
         'title' => $row['title'],
         'description' => $row['description'],
-        'links' => $projectLinks[$projectId] ?? [],
+        'link' => $row['link'],
         'content' => $row['content'],
         'visible' => $row['visible']
     ];
@@ -127,11 +115,11 @@ if ($dbh->connect_error){
         $description = $_POST['projectdesc'];
         $content = $_POST['content'];
 
-        $linkupdate = "UPDATE project_links SET link = '$link'";
-        $dbh->query($linkupdate);
-
-        $projectupdate = "UPDATE projects SET image = '$img', imageAlt = '$imgAlt', title = '$title', description = '$description', content = '$content' WHERE id = $projectId";
+        $projectupdate = "UPDATE projects SET image = '$img', imageAlt = '$imgAlt', title = '$title', description = '$description', link = '$link' , content = '$content' WHERE id = $projectId";
         $dbh->query($projectupdate);
+        if (!$dbh->query($projectupdate)) {
+            echo "Update error: " . $dbh->error;
+        }
 
         header('Location: ' . $_SERVER['PHP_SELF'] . '#project' . $projectId);
         exit;
@@ -223,10 +211,6 @@ if (isset($_POST['logout'])){
             <?php
                 if(!empty($projects)){    
                     foreach($projects as $project){
-                        $links = '';
-                        foreach($project['links'] as $link){
-                            $links .= '<label for="link">link: </label><br><input type="text" value="'. $link .'" name="link"><br>';
-                        }
                         
                     $output .= '<div class="formwrapper" id="project'. $project['id'] .'">
                     <form method="post" name="project_'. $project['id'] .'">
@@ -246,7 +230,7 @@ if (isset($_POST['logout'])){
                     <label for="projectdesc">Project description: </label><br>
                     <textarea name="projectdesc">'. $project['description'].'</textarea><br><hr>
 
-                    <div>'. $links .'</div><hr>
+                    <div><label for="link">link: </label><br><input type="text" value="'. $project['link'] .'" name="link"><br></div><hr>
 
                     <label for="content">Content: </label><br>
                     <textarea name="content">'. $project['content'] .'</textarea><br><hr>
@@ -271,11 +255,15 @@ if (isset($_POST['logout'])){
                 <?php
                 if(!empty($messages)){    
                     foreach($messages as $message){
-                        $messageoutput .= '<div class="message"> <p><b>'. $message['tad'] .' </b></p>
-                        <p>'. $message['name'] .'</p> <p>'. $message['email'] .'</p> <hr>
-                        <h3>Message: </h3>
-                        <p>'. $message['message'] .'</p> 
-                        <div class="buttonrow">
+                        $messageoutput .= '<div class="message"> <p><b>'. $message['tad'] .' </b></p>';
+
+                    // laat alleen persoonlijke infomatie zien als je clearance hoog genoeg is
+                        if($clearance == true){
+                            $messageoutput .= '<p '. $submitstate .'>'. $message['name'] .'</p> <p '. $submitstate .'>'. $message['email'] .'</p> <hr>
+                            <h3>Message: </h3>';
+                        };
+
+                        $messageoutput .= '<p>'. $message['message'] .'</p><div class="buttonrow">
                         <form method="post" name="message_'. $message['id'] .'">
                         <input type="hidden" name="message_id" value="'. $message['id'] .'">
                         <input type="submit" class="deletebutton" onclick="return confirm(\'Are you sure you want to delete this message?\');" name="deletemessage" value="" '. $submitstate .'>
