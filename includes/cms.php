@@ -166,7 +166,20 @@ if ($dbh->connect_error){
         header('Location: ' . $_SERVER['PHP_SELF']);
         exit;
     }
+
+    // verweidert het bericht uit de database
+    if (isset($_POST['deletemessage'])){
+        $messageId = $_POST['message_id'];
+
+        $deletemessage = "DELETE FROM messages WHERE id = $messageId";
+        $dbh->query($deletemessage);
+
+        header('Location: ' . $_SERVER['PHP_SELF']);
+        exit;
+        }
+    
 }
+
 
 // als je uitlogt zorgt dit ervoor dat de status ook geupdate wordt anders bewaart hij de staat
 if (isset($_POST['logout'])){
@@ -263,8 +276,9 @@ if (isset($_POST['logout'])){
                         <h3>Message: </h3>
                         <p>'. $message['message'] .'</p> 
                         <div class="buttonrow">
-                        <form method="post" name="'. $message['id'] .'">
-                        <input type="submit" class="deletebutton" onclick="return confirm(\'Are you sure you want to delete this message?\');" name="delete-button" value="" '. $submitstate .'>
+                        <form method="post" name="message_'. $message['id'] .'">
+                        <input type="hidden" name="message_id" value="'. $message['id'] .'">
+                        <input type="submit" class="deletebutton" onclick="return confirm(\'Are you sure you want to delete this message?\');" name="deletemessage" value="" '. $submitstate .'>
                         </form></div></div><hr>';
                     };
                 }

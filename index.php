@@ -39,8 +39,15 @@
         </section>
     </body>
     <footer>
-        <img src="./images/github.svg" class="icon">
-        <h2><a class="link" href="https://github.com/Mem8or" target="_blank">Github</a></h2>
-        <h2><a class="link" href="includes/login.php">CMS</a></h2>
+
+        <a class="link" href="https://github.com/Mem8or" target="_blank">
+        <div class="linkcontent">
+            <img src="./images/github.svg" class="icon" alt="GitHub Icon">
+            <h2>Github</h2>
+        </div>
+        </a>
+
+        <a class="link" href="includes/login.php"><h2>CMS</h2></a>
+        
     </footer>
 </html>
