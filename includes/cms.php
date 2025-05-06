@@ -194,18 +194,6 @@ if (isset($_POST['logout'])){
         <form action="../index.php" method="POST">
             <input name="logout" id="logout" type="submit" value="Logout">
         </form>
-<<<<<<< HEAD
-
-        <div>
-            <h2>Content</h2>
-        </div>
-        <div>
-            <h2>Messages</h2>
-        </div>
-=======
-    </div>
->>>>>>> 26e439f306a8531cbcc8735f2489e7b4e2f2c075
-
 
     <div id="wrapper">
         <div id="content" class="column">
