@@ -177,6 +177,7 @@ footer{
     border-radius: 10px;
     width: 110px;
     height: max-content;
+    font-weight: bold;
     background-color: #348731;
     cursor: pointer;
 }

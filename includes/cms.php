@@ -171,11 +171,10 @@ if ($dbh->connect_error){
 
 // als je uitlogt zorgt dit ervoor dat de status ook geupdate wordt anders bewaart hij de staat
 if (isset($_POST['logout'])){
-
+    session_destroy();
     $_SESSION['loggedin'] = false;
 
-    session_destroy();
-    header('Location: login.php');
+    header('Location: ../index.php');
     exit;
 }
 
