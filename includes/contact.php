@@ -1,4 +1,8 @@
 <?php
+    $server = 'sql303.infinityfree.com';
+    $user = 'if0_38517269';
+    $pass = 'cOpyieE84vpv0H';
+    $db = 'if0_38517269_database';
     $errors = '';
     $name = '';
     $email = '';
@@ -7,7 +11,7 @@
     $semail = '';
     $smessage = '';
 
-    $mysqli = new mysqli("localhost", "GertvanTil", "gert2002", "portfolio-website");
+    $mysqli = new mysqli($server, $user, $pass, $db);
 
     if ($mysqli->connect_error) {
         die("Connection failed: " . $mysqli->connect_error);

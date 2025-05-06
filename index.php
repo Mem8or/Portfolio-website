@@ -22,20 +22,20 @@
                 <br>
                 Naast development heb ik ook een oog voor design en mediavormgeving, ik ben ook gezellig en fijn om mee te werken.
                 <br><br>
-                Ik hoop dat deze website een goed dee geeft wat van mij verwacht kan worden.
+                Ik hoop dat deze website een goed idee geeft wat van mij verwacht kan worden.
             </p>
         </section>
 
         <section id="projects">
             <hr>
             <h1>Projecten:</h1>
-            <?php include("./includes/projects.php");?>
+            <?php include("includes/projects.php");?>
         </section>
         
         <section id="contact">
             <hr>
             <h1>Contact:</h1>
-            <?php include("./includes/contact.php");?>
+            <?php include("includes/contact.php");?>
         </section>
     </body>
     <footer>
@@ -47,7 +47,9 @@
         </div>
         </a>
 
-        <a class="link" href="includes/login.php"><h2>CMS</h2></a>
-        
+        <a class="link" href="includes/login.php">
+            <h2>CMS</h2>
+        </a>
+
     </footer>
 </html>
