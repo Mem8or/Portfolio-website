@@ -172,7 +172,7 @@ if (isset($_POST['logout'])){
 
 
 ?>
-
+<!DOCTYPE html>
 <html>
     <head>
         <title>CMS</title>
@@ -186,6 +186,7 @@ if (isset($_POST['logout'])){
         <form action="../index.php" method="POST">
             <input name="logout" id="logout" type="submit" value="Logout">
         </form>
+    </div>
 
     <div id="wrapper">
         <div id="content" class="column">
@@ -264,5 +265,4 @@ if (isset($_POST['logout'])){
                 ?>
             </div>
         </div>
-    </div>
 </html>

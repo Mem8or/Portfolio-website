@@ -39,7 +39,7 @@
         $output .= '<div class="expandible"> <div class="expandiblePreview"> <img class="previewImage" src="'. $project['image'] .'" alt="'. $project['imageAlt'] .'"> <div class="previewtext"><h2>'. $project['title'] .':</h2><p>'. $project['description'] .'</p></div></div>';
         // content in het uitklapbare gedeelte
         $output .= '<div class="expandibleContentWrapper">
-        <div class="linkcontainer"><a  class="pagelink" href="'. $project['link'] .'" target="_blank"><p>Bekijk Project</p></a></div>
+        <div class="linkcontainer"><a  class="pagelink" href="'. $project['link'] .'" target="_blank"><p class = "linktext">Bekijk Project</p></a></div>
         <div class="expandibleContent">'. $project['content'] .'</div> </div> </div>';
     }};
 
