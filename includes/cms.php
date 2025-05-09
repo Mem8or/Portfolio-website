@@ -89,21 +89,16 @@ if ($dbh->connect_error){
 
     // toevoegen nieuw project (addbutton)
     if (isset($_POST['addbutton'])){
-        $addproject = "INSERT INTO projects (image, imageAlt, title, description, content, visible)
-        VALUES ('placeholder.jpg', 'Placeholder image', 'New Project', 'Description goes here...', 'Content goes here...', 0)";
+        $addproject = "INSERT INTO projects (image, imageAlt, link, title, description, content, visible)
+        VALUES ('placeholder.jpg', 'Placeholder image', 'link', 'New Project', 'Description goes here...', 'Content goes here...', 0)";
 
         $dbh->query($addproject);
 
         $newProjectId = $dbh->insert_id;
 
-        $insertLinks = "INSERT INTO project_links (project_id, link)
-                VALUES ($newProjectId, 'link goes here')";
-        $dbh->query($insertLinks);
-
         header('Location: ' . $_SERVER['PHP_SELF'] . '#project' . $projectId);
         exit;
     }
-    
 
     // veranderen project data (submit button)
     if (isset($_POST['submitbutton'])){
@@ -141,12 +136,9 @@ if ($dbh->connect_error){
         exit;
     }
 
-    // verweidert de link en project uit de database
+    // verweidert het project uit de database
     if (isset($_POST['deletebutton'])){
         $projectId = $_POST['project_id'];
-
-        $deletelink = "DELETE FROM project_links WHERE project_id = $projectId";
-        $dbh->query($deletelink);
 
         $deleteproject = "DELETE FROM projects WHERE id = $projectId";
         $dbh->query($deleteproject);
