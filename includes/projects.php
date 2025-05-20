@@ -1,12 +1,12 @@
 <?php
-    $server = 'sql303.infinityfree.com';
-    $user = 'if0_38517269';
-    $pass = 'cOpyieE84vpv0H';
-    $db = 'if0_38517269_database';
-    // $server = 'localhost';
-    // $user = 'GertvanTil';
-    // $pass = 'gert2002';
-    // $db = 'portfolio-website';
+    // $server = 'sql303.infinityfree.com';
+    // $user = 'if0_38517269';
+    // $pass = 'cOpyieE84vpv0H';
+    // $db = 'if0_38517269_database';
+    $server = 'localhost';
+    $user = 'GertvanTil';
+    $pass = 'gert2002';
+    $db = 'portfolio-website';
     $output = '';
     
     $dbh = new mysqli($server, $user, $pass, $db);
@@ -36,11 +36,11 @@
     if(!empty($projects)){    
         foreach($projects as $project){
         // content voor in de preview
-        $output .= '<div class="expandible"> <div class="expandiblePreview"> <img class="previewImage" src="'. $project['image'] .'" alt="'. $project['imageAlt'] .'"> <div class="previewtext"><h2>'. $project['title'] .':</h2><p>'. $project['description'] .'</p></div></div>';
+        $output .= '<article><div class="expandible"> <div class="expandiblePreview"> <img class="previewImage" src="'. $project['image'] .'" alt="'. $project['imageAlt'] .'"> <div class="previewtext"><h2>'. $project['title'] .':</h2><p>'. $project['description'] .'</p></div></div>';
         // content in het uitklapbare gedeelte
         $output .= '<div class="expandibleContentWrapper">
         <div class="linkcontainer"><a  class="pagelink" href="'. $project['link'] .'" target="_blank"><p>Bekijk Project</p></a></div>
-        <div class="expandibleContent">'. $project['content'] .'</div> </div> </div>';
+        <div class="expandibleContent">'. $project['content'] .'</div> </div> </div>/article>';
     }};
 
     echo $output;

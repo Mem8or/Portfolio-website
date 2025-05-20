@@ -13,7 +13,6 @@ body{
     background-image: url(../images/background.jpg);
     background-repeat: repeat;
     background-attachment: fixed;
-    font-size: 16px;
 }
 
 a{
@@ -81,6 +80,21 @@ footer{
 .text{
     padding: 20px;
 }
+
+.mediumLargeText{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 0px;
+}
+.largeText{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+    margin-left: 20px;
+}
+
 
 .linkcontainer{
     display: flex;
