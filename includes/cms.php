@@ -1,12 +1,12 @@
 <?php
-$server = 'sql303.infinityfree.com';
-$user = 'if0_38517269';
-$pass = 'cOpyieE84vpv0H';
-$db = 'if0_38517269_database';
-// $server = 'localhost';
-// $user = 'GertvanTil';
-// $pass = 'gert2002';
-// $db = 'portfolio-website';
+// $server = 'sql303.infinityfree.com';
+// $user = 'if0_38517269';
+// $pass = 'cOpyieE84vpv0H';
+// $db = 'if0_38517269_database';
+$server = 'localhost';
+$user = 'GertvanTil';
+$pass = 'gert2002';
+$db = 'portfolio-website';
 $output = '';
 $messageoutput = '';
 $clearance = false;
@@ -163,9 +163,8 @@ if ($dbh->connect_error){
 
 // als je uitlogt zorgt dit ervoor dat de status ook geupdate wordt anders bewaart hij de staat
 if (isset($_POST['logout'])){
+    session_unset();
     session_destroy();
-    $_SESSION['loggedin'] = false;
-
     header('Location: ../index.php');
     exit;
 }
