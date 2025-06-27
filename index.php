@@ -47,7 +47,7 @@
         </div>
         </a>
 
-        <a class="link" href="includes/login.php">
+        <a class="link" href="includes/login.php" rel="nofollow">
             <h2>CMS</h2>
         </a>
 
