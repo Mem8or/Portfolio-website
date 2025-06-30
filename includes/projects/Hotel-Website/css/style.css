@@ -1,0 +1,663 @@
+/* Basis */
+html{
+    display: flex;
+    background-color: #5c4525;
+    font-family: 'Sitka';
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    width: 100%;
+    border-bottom: #ffffff 5px solid;
+}
+
+article{
+    height: 100vh;
+}
+.pageContent{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+.mediumtext{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: max-content;
+    height: max-content;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.largetext{
+    width: max-content;
+    height: max-content;
+    font-size: 30px;
+    text-decoration: none;
+    color: white;
+    margin: 0px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.textblock{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    height: 100vh;
+}
+
+/* Kamers */
+#Kameredit {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: none;
+    top: 0px;
+    right: 0px;
+    color: transparent;
+    border: none;
+    background-color: transparent;
+}
+
+#Kameredit:hover{
+    cursor: pointer;
+}
+#kameredit input{
+    padding: none;
+}
+
+.input{
+    width: 200px;
+}
+
+.kamereditform,
+.kamerarticle {
+    transition: all 0.3s ease;
+}
+
+.kamereditform{
+    background-color: white;
+    width: 25%;
+    height: 700px;
+    border-bottom: black 5px solid;
+}
+
+.kamereditform.hideform{
+    display: none;
+    border: 0px;
+}
+
+.kamereditform form{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.kamereditform label{
+    padding-left: 10px;
+    border-bottom: black 1px solid;
+    font-size: 30px;
+}
+
+.kamereditform textarea{
+    max-width: 100%;
+    height: max-content;
+    box-sizing: border-box;
+    border-style: none;
+    outline: none;
+    border-bottom: black 2px solid;
+    margin-bottom: 10px;
+}
+
+.kamereditform input{
+    max-width: 100%;
+    border-style: none;
+    height: 60px;
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.kamereditrow{
+    display: flex;
+    flex-direction: row;
+}
+
+.kamerarticle{
+    position: relative;
+    background-size: 100%;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 75%;
+    height: 700px;
+    align-self: center;
+    border-bottom: white solid 5px;
+}
+
+.kamerarticle.hideform{
+    width: 100%;
+}
+
+.kamerarticle .column{
+    display: flex;
+    flex-direction: column;
+    height: 275px;
+}
+
+.kamerarticle input{
+    height: 60px;
+    background-color: rgba(0, 212, 35, 0.5);
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    border-style: none;
+    width: 100%;
+    font-size: 40px;
+    color: #ffffff;
+}
+.kamerarticle input:hover{
+    cursor: pointer;
+    font-style: italic;
+    background-color: rgba(0, 212, 35, 0.6);
+    transition: 0.5s;
+}
+
+.kamerarticle form{
+    margin-top: auto;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.clickable:hover{
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.kamerarticle p{
+    width: max-content;
+    max-width: 50%;
+    align-self: center;
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 200%;
+}
+
+.kamerarticle .largetext{
+    font-size: 50px;
+}
+
+.kamerarticle img{
+    width: 250px;
+    height: 300px;
+}
+
+.kamerswrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.info{
+    margin: 10px;
+    border-radius: 5px;
+    width: max-content;
+    height: max-content;
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.info .mediumtext{
+    backdrop-filter: none;
+    max-width: 100%;
+    margin: 0;
+}
+
+section{
+    width: 100%;
+}
+
+/* over ons */
+#welkom{
+    background-image: url(../images/Overons-welkom.jpg);
+}
+#onsverhaal{
+    background-image: url(../images/Overons-onsverhaal.jpg);
+}
+#onzewaarden{
+    background-image: url(../images/Overons-onzewaarden.jpg);
+}
+#onsteam{
+    background-image: url(../images/Overons-onsteam.jpg);
+}
+
+#overonsContainer article{
+    background-size: 100%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    align-self: center;
+    border-bottom: white solid 5px;
+}
+
+#overonsContainer p{
+    width: max-content;
+    max-width: 90%;
+    align-self: center;
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 200%;
+}
+#overonsContainer .largetext{
+    font-size: 100px;
+}
+
+/* menu */
+.menulist{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    height: max-content;
+    padding: 10px;
+    margin: 0px;
+}
+
+.menulist li a{
+    width: max-content;
+    max-width: 100%;
+    height: max-content;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+
+.menulogo{
+    height: 49px;
+    border: 5px #5c4525 solid;
+    background-color: #5c4525;
+}
+
+.active{
+    display: flex;
+    background-color: #5c4525;
+    color: white;
+    border: 2px #5c4525 solid;
+}
+
+.active:hover{
+    background-color: #775c36;
+}
+
+.current{
+    display: flex;
+    background-color: white;
+    color: #5c4525;
+    cursor: default;
+    border: 2px #5c4525 solid;
+}
+
+/* footer */
+
+footer article{
+    max-width:  300px;
+    height: min-content;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-content: baseline;
+    background-color: #5c4525;
+    padding-bottom: 20px;
+    justify-content: space-evenly;
+    
+}
+
+.container ul{
+    margin: 5px;
+    list-style-type: none;
+}
+
+.container ul a{
+    padding: 0px;
+}
+
+.container ul a:hover{
+    color: rgb(117, 117, 117);
+
+}
+.container ul p{
+    padding: 0px;
+}
+
+.weatherwidget-io{
+    padding-top: 5px;
+    width: 200px;
+    height: 400px;
+    font-family: 'Sitka';
+}
+
+/*restaurantpagina / menu kaart*/
+
+#restaurantcontainer{
+    display: flex;
+    overflow: hidden;
+    background-image: url(../images/Restaurant-background.jpg);
+    background-size: 100%;
+    background-position: top;
+    min-height: 90vh;
+}
+#restaurantcontainer p{
+    align-content: center;
+    margin-top: 10px;
+    font-size: 200%;
+}
+
+#restaurantcontainer .largetext{
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    border-radius: 5px;
+    font-size: 50px;
+}
+
+.tab {
+    margin-top: 10px;
+    margin-right: 20px;
+    overflow: hidden;
+    border: 2px solid #ffffff;
+    background-color: #5c4525;
+}
+
+.introtext p{
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    border-radius: 5px;
+}
+
+.tab button {
+    color: white;
+    background-color: inherit;
+    font-family: 'Sitka';
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+textarea{
+    resize: none;
+    width: 500px;
+    height: 250px;
+}
+
+.tab button:hover {
+  background-color: #775c36;
+}
+
+.tab button.active {
+  background-color: #ffffff;
+  color: #5c4525;
+}
+
+.tabcontent {
+  display: none;
+  border: 2px solid #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-size: 100%;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+#Diner {
+    background-image: url(../images/Restaurant-diner.jpg);
+}
+
+#Ontbijt {
+    background-image: url(../images/Restaurant-ontbijt.jpg);
+}
+
+#Lunch {
+    background-image: url(../images/Restaurant-lunch.jpg);
+}
+
+.tabcontent .largetext{
+    color: #ffffff;
+    margin-left: 10px;
+    width: max-content;
+    padding: 5px;
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.tabcontent .mediumtext{
+    width: max-content;
+    color: #ffffff;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tabcontent li{
+    padding: 5px;
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    border-radius: 5px;
+}
+
+
+.menucontainer{
+    padding-right: 10px;
+}
+
+.menucontainer li, ul{
+    width: max-content;
+    list-style: none;
+    padding: 0px;
+    padding-left: 10px;
+}
+
+.menucontainer hr{
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.restaurant-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+.introtext {
+    width: 45vw;
+}
+
+.menucontainer {
+    width: 45%;
+}
+
+/* home */
+
+#homebg1{
+    background-image: url(../images/Home-welcome.jpg);
+    background-size: 100%;
+    width: 100%;
+}
+
+#homebg2{
+    background-image: url(../images/Home-kamers.jpg);
+    background-size: 100%;
+    width: 100%;
+}
+
+#homebg3{
+    background-image: url(../images/Home-restaurant.jpg);
+    background-size: 100%;
+    width: 100%;
+}
+
+#homebg4{
+    background-image: url(../images/Home-ontdek.jpg);
+    background-size: 100%;
+    width: 100%;
+}
+
+.sticky{
+    height: 100vh;
+    top: 0;
+    position: sticky;
+    display: flex;
+    background-position: center;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: #ffffff solid 5px;
+}
+
+.sticky:nth-child(1){
+    z-index: 4;
+}
+.sticky:nth-child(2){
+    z-index: 3;
+}
+.sticky:nth-child(3){
+    z-index: 2;
+}
+.sticky:nth-child(4){
+    z-index: 1;
+}
+
+.sticky .largetext{
+    font-size: 90px;
+    font-style: italic;
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.sticky .mediumtext{
+    font-size: 40px;
+    font-style: bold;
+    max-width: 90vw;
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    border-radius: 5px;
+}
+
+/* Contactpagina */
+#contactcontainer{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    background-image: url(../images/Contact-background.jpg);
+    background-size: 100%;
+    background-position: top;
+    padding: 10px;
+}
+
+#contactcontainer article{
+    backdrop-filter: brightness(65%) blur(5px) sepia(40%);
+    border-radius: 5px;
+    height: max-content;
+}
+
+#contactcontainer .mediumtext{
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+#contactcontainer .largetext{
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+#contactcontainer form{
+    font-family: 'Sitka';
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: min-content;
+}
+
+form p{
+    margin: 0px;
+}
+
+#contactcontainer input{
+    border-style: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#contactcontainer textarea{
+    border-style: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#contactcontainer .submitbutton{
+    background-color: rgba(0, 212, 35, 0.5);
+    color: white;
+    font-size: 30px;
+}
+#contactcontainer .submitbutton:hover{
+    font-style: italic;
+    cursor: pointer;
+    background-color: rgba(0, 212, 35, 0.6);
+}
+
+hr{
+    border: 1px white solid;
+    width: 100%;
+}
