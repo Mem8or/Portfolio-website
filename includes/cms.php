@@ -1,12 +1,12 @@
 <?php
-$server = 'sql303.infinityfree.com';
-$user = 'if0_38517269';
-$pass = 'cOpyieE84vpv0H';
-$db = 'if0_38517269_database';
-// $server = 'localhost';
-// $user = 'GertvanTil';
-// $pass = 'gert2002';
-// $db = 'portfolio-website';
+// $server = 'sql303.infinityfree.com';
+// $user = 'if0_38517269';
+// $pass = 'cOpyieE84vpv0H';
+// $db = 'if0_38517269_database';
+$server = 'localhost';
+$user = 'GertvanTil';
+$pass = 'gert2002';
+$db = 'portfolio-website';
 $output = '';
 $messageoutput = '';
 $clearance = false;
@@ -89,21 +89,16 @@ if ($dbh->connect_error){
 
     // toevoegen nieuw project (addbutton)
     if (isset($_POST['addbutton'])){
-        $addproject = "INSERT INTO projects (image, imageAlt, title, description, content, visible)
-        VALUES ('placeholder.jpg', 'Placeholder image', 'New Project', 'Description goes here...', 'Content goes here...', 0)";
+        $addproject = "INSERT INTO projects (image, imageAlt, link, title, description, content, visible)
+        VALUES ('placeholder.jpg', 'Placeholder image', 'link', 'New Project', 'Description goes here...', 'Content goes here...', 0)";
 
         $dbh->query($addproject);
 
         $newProjectId = $dbh->insert_id;
 
-        $insertLinks = "INSERT INTO project_links (project_id, link)
-                VALUES ($newProjectId, 'link goes here')";
-        $dbh->query($insertLinks);
-
         header('Location: ' . $_SERVER['PHP_SELF'] . '#project' . $projectId);
         exit;
     }
-    
 
     // veranderen project data (submit button)
     if (isset($_POST['submitbutton'])){
@@ -141,12 +136,9 @@ if ($dbh->connect_error){
         exit;
     }
 
-    // verweidert de link en project uit de database
+    // verweidert het project uit de database
     if (isset($_POST['deletebutton'])){
         $projectId = $_POST['project_id'];
-
-        $deletelink = "DELETE FROM project_links WHERE project_id = $projectId";
-        $dbh->query($deletelink);
 
         $deleteproject = "DELETE FROM projects WHERE id = $projectId";
         $dbh->query($deleteproject);
@@ -171,16 +163,15 @@ if ($dbh->connect_error){
 
 // als je uitlogt zorgt dit ervoor dat de status ook geupdate wordt anders bewaart hij de staat
 if (isset($_POST['logout'])){
+    session_unset();
     session_destroy();
-    $_SESSION['loggedin'] = false;
-
     header('Location: ../index.php');
     exit;
 }
 
 
 ?>
-
+<!DOCTYPE html>
 <html>
     <head>
         <title>CMS</title>
@@ -194,18 +185,7 @@ if (isset($_POST['logout'])){
         <form action="../index.php" method="POST">
             <input name="logout" id="logout" type="submit" value="Logout">
         </form>
-<<<<<<< HEAD
-
-        <div>
-            <h2>Content</h2>
-        </div>
-        <div>
-            <h2>Messages</h2>
-        </div>
-=======
     </div>
->>>>>>> 26e439f306a8531cbcc8735f2489e7b4e2f2c075
-
 
     <div id="wrapper">
         <div id="content" class="column">
@@ -284,5 +264,4 @@ if (isset($_POST['logout'])){
                 ?>
             </div>
         </div>
-    </div>
 </html>

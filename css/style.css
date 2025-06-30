@@ -102,6 +102,10 @@ footer{
     justify-content: center;
 }
 
+.linktext{
+    font-weight: bold;
+}
+
 .jump{
     padding: 0;
 }
