@@ -28,7 +28,7 @@
 
         $user = $result->fetch_assoc();
 
-            if ($user['password'] === $password){
+            if ($user && password_verify($password, $user['password'])){
                 $_SESSION['loggedin'] = true;
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['clearance'] = $user['clearance'];
@@ -36,6 +36,14 @@
                 exit;
             } else {
                 echo 'Invalid username or password!';
+            }
+
+            if ($user) {
+            echo 'Stored hash: ' . $user['password'] . '<br>';
+            echo 'Entered password: ' . $password . '<br>';
+            var_dump(password_verify($password, $user['password']));
+            } else {
+                echo 'User not found.';
             }
         }
 ?>
