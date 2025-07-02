@@ -40,7 +40,7 @@
         // content in het uitklapbare gedeelte
         $output .= '<div class="expandibleContentWrapper">
         <div class="linkcontainer"><a  class="pagelink" href="'. $project['link'] .'" target="_blank"><p>Bekijk Project</p></a></div>
-        <div class="expandibleContent">'. $project['content'] .'</div> </div> </div>/article>';
+        <div class="expandibleContent">'. $project['content'] .'</div> </div> </div></article>';
     }};
 
     echo $output;
