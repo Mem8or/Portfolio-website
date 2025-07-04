@@ -31,7 +31,6 @@
         'content' => $row['content']
         ];
 }
-
     // het genereeren van de uitklapbare projectlijst
     if(!empty($projects)){    
         foreach($projects as $project){
